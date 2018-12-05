@@ -1,5 +1,7 @@
 {
+  "name": "@yarnaimo/firebase-testing",
   "version": "0.0.0",
+  "repository": "github:yarnaimo/firebase-testing",
   "license": "MIT",
   "author": "yamaimo <yarnaimo@gmail.com>",
   "main": "dist/index.js",
@@ -15,6 +17,9 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "devDependencies": {
+    "@yarnaimo/rain": "^0.0.5"
   },
   "lint-staged": {
     "./package.json": [
