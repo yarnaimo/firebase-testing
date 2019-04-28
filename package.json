@@ -1,6 +1,6 @@
 {
   "name": "@yarnaimo/firebase-testing",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": "github:yarnaimo/firebase-testing",
   "license": "MIT",
   "author": "yamaimo <yarnaimo@gmail.com>",
@@ -18,20 +18,21 @@
       "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,vue,gql,md}": [
+      "prettier --write --ignore-path .gitignore",
+      "git add"
+    ],
+    "./package.json": [
+      "sort-package-json",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@firebase/testing": "latest"
   },
   "devDependencies": {
-    "@yarnaimo/rain": "latest"
-  },
-  "lint-staged": {
-    "./package.json": [
-      "sort-package-json",
-      "git add"
-    ],
-    "*.{js,jsx,ts,tsx,css,scss,vue,gql,md}": [
-      "prettier --write --ignore-path .gitignore",
-      "git add"
-    ]
+    "@yarnaimo/rain": "latest",
+    "@yarnaimo/tss": "latest"
   }
 }
